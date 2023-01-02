@@ -4,7 +4,7 @@ resource "aws_instance" "netcat" {
   key_name = aws_key_pair.deployer.key_name
   user_data = <<EOF
   #!/bin/bash
-  nc -l 8080
+  nc -kl 8080
 
   EOF
   
